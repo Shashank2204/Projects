@@ -1,0 +1,28 @@
+
+		
+		<table class="table-responsive">
+		<thead>
+		
+  <tr>
+    <th>CNF Code</th>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Time</th>
+	<th>Size</th>
+  </tr>
+  </thead>
+  <tbody>
+  
+   
+  <tr ng-repeat="i in mctrl.people | filter:mctrl.searchText" ng-click="mctrl.selectUser=i" ng-class="{true:'active',false:''}[mctrl.selectUser==i]">
+    <td >{{i.id}}</td>
+    <td >{{i.firstName}}</td>
+    <td >{{i.date}}</td>
+    <td >{{i.time}}</td>
+	<td >{{i.size}}</td>
+	<td ><button ng-click="mctrl.deletePerson($index)">Delete</button></td >
+  </tr>
+ 
+  </tbody>
+ 
+</table>

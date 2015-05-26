@@ -1,0 +1,17 @@
+
+		<div>The following customers requested to contact.
+		<table>
+		<tr>
+    <th>Name</th>
+    
+    <th>Phone No.</th>
+    
+  </tr>
+ <tr ng-repeat="u in mctrl.peopleReq" ng-click="mctrl.selectUser=i" ng-class="{true:'active',false:''}[mctrl.selectUser==u]">
+    <td >{{u.firstName}}</td>
+    
+    <td >{{u.phone}}</td>
+    
+	<td ><button ng-click="mctrl.deletePerson($index)">Delete</button></td >
+  </tr>
+  </table></div>
